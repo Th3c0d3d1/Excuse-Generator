@@ -17,6 +17,7 @@ let when = [
 ];
 
 window.onload = function() {
+  // windows.onload tells the function to run on the page loadup
   let excuse = document.getElementById("excuse");
   excuse.innerHTML = `${who[excuseGen(who)]} ${action[excuseGen(action)]} 
   ${what[excuseGen(what)]} ${when[excuseGen(when)]}`;
@@ -24,13 +25,14 @@ window.onload = function() {
   // who[excuseGen(who)] +
   // " " +
   // action[excuseGen(action)] +
-  // " " +
+  // " " +git
   // what[excuseGen(what)] +
   // " " +
   // when[excuseGen(when)];
 
   function excuseGen(myArray) {
     let myRandom = Math.floor(Math.random() * myArray.length);
+    // randomizes the array
     return myRandom;
   }
 };
